@@ -22,7 +22,7 @@ gulp.task('default', ['clean', 'less', 'requirejs', 'enforce-coverage', 'copy', 
 gulp.task('heroku:staging', ['default']);
 
 gulp.task('clean', function () {
-  return gulp.src(['public', '.tmp', 'coverage'], {
+  return gulp.src(['public/*', '.tmp', 'coverage'], {
     read: false
   }).pipe(clean());
 });
