@@ -1,3 +1,3 @@
-require(['app'], function (app) {
-  app.start();
+require(function () {
+  console.log('hello world')
 });
