@@ -1,0 +1,40 @@
+{
+  "name": "beginkit",
+  "version": "0.1.0",
+  "prerelease": "alpha",
+  "description": "sample project",
+  "main": "server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brightdigit/ll3.git"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "author": "Leo G. Dion, BrightDigit, LLC <leogdion@brightdigit.com>",
+  "devDependencies": {
+    "bower": "^1.3.3",
+    "bower-requirejs": "^0.11.0",
+    "chai": "^1.9.1",
+    "chai-things": "^0.2.0",
+    "event-stream": "^3.1.5",
+    "gulp": "^3.7.0",
+    "gulp-beautify": "^1.1.0",
+    "gulp-bump": "^0.1.8",
+    "gulp-clean": "^0.3.0",
+    "gulp-coveralls": "^0.1.2",
+    "gulp-express-service": "^1.2.3",
+    "gulp-istanbul": "^0.2.0",
+    "gulp-istanbul-enforcer": "^1.0.2",
+    "gulp-jshint": "^1.6.1",
+    "gulp-jst": "^0.1.1",
+    "gulp-jst-concat": "git+https://github.com/brightdigit/gulp-jst-concat.git",
+    "gulp-less": "^1.2.3",
+    "gulp-mocha": "^0.4.1",
+    "gulp-rename": "^1.2.0",
+    "requirejs": "^2.1.13"
+  }
+}

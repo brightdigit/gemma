@@ -11,3 +11,8 @@ wp-content/cache/
 wp-content/backups/
 sitemap.xml.gz
 wp-config.php
+bower_components
+npm-debug.log
+/.tmp
+node_modules
+coverage
