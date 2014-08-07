@@ -18,7 +18,7 @@ header > nav {
   clear: both;
   width: 100%;
   background-color: #000;
-  height: 1em;
+  height: 50px;
   padding: 10px 0px;
   z-index: 100;
 }
@@ -33,15 +33,20 @@ header > nav ul li {
   float: left;
   margin: 0px 10px;
   text-transform: lowercase;
+  font-size: 24pt;
+  line-height: 96px;
 }
 header > nav ul li.brand {
   font-family: 'Dancing Script', cursive;
   text-transform: capitalize;
-  font-size: 18pt;
+  font-size: 48pt;
   line-height: 9pt;
 }
 header > nav ul li.brand a {
   color: #FFF;
+}
+header > nav ul.pull-right {
+  float: right;
 }
 header > nav ul.right {
   float: right;
@@ -50,5 +55,22 @@ header > nav a {
   text-decoration: none;
 }
 main {
-  margin-top: 40px;
+  margin-top: 35px;
+}
+main > section.callout-image {
+  padding: 50px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+main > section.callout-image h1 {
+  font-size: 50pt;
+}
+main > section.callout-image p {
+  font-size: 20pt;
+}
+main > section.description p {
+  max-width: 720px;
+  font-size: 15pt;
+  margin: 50px auto;
 }
