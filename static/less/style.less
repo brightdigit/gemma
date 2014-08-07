@@ -88,16 +88,15 @@ main {
 }
 
 main > section {
-  padding-top: 20px;
+  padding: 20px;
   ul, ol {
     padding: 0;
   }
   &.people-photos {
     ul {
       list-style: none;
-      display: block;
       margin: 0px auto;
-      max-width: 700px;
+      max-width: 960px;
       li {
         float:left;
         margin: 10px;
@@ -106,24 +105,28 @@ main > section {
         }
         img {
           display: block;
-          width: 100px;
-          height: 100px;
-          /*.grayscale(1.0);
-          .blur(1px);*/
+          width: 136px;
+          height: 136px;
+          .grayscale(1.0);
+          /*.blur(1px);*/
           cursor: pointer;
-          -webkit-filter: blur(1px) grayscale(100%);
+          /*-webkit-filter: blur(1px) grayscale(100%);*/
           &:hover {
             -webkit-filter: grayscale(100%);
           }
         }
         figcaption {
-          width: 100px;
+          width: 136px;
           display: block;
           overflow: hidden;
           margin-top: 10px;
           font-size: 0.9em;
           text-align: center;
           font-weight: 600;
+          & > .title {
+            font-size: 0.75em;
+            font-weight: normal;
+          }
         }
       }
     }
@@ -227,4 +230,10 @@ main > section.blog-enteries {
 
 footer {
   clear: both;
+
+    padding: 30px;
+    background-color: #000;
+    color: #CCC;
+    margin-bottom: 0px;
+    text-align: right;
 }
