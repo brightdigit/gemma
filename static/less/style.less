@@ -1,5 +1,10 @@
 @import url(//fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Lora:400,700,400italic,700italic|Josefin+Sans:100,300,400,700,100italic,300italic,400italic,700italic|Merriweather:400,300italic,300,400italic,700,700italic|Dancing+Script:400,700|Raleway:400,200,100,300,700,900);
 
+.blur(@value){
+    filter: blur(@value);
+    -webkit-filter: blur(@value);
+}
+
 html, body {
   background-color: #FFF;
   color: #333;
@@ -21,7 +26,7 @@ header > nav {
   clear: both;
   width: 100%;
   background-color: #000;
-  height: 1em;
+  height: 50px;
   padding: 10px 0px;
   z-index: 100;
   ul
@@ -35,15 +40,20 @@ header > nav {
       float: left;
       margin: 0px 10px;
       text-transform: lowercase;
+      font-size: 24pt;
+      line-height: 96px;
     }
     li.brand{
       font-family: 'Dancing Script', cursive;
       text-transform: capitalize;
-      font-size: 18pt;
+      font-size: 48pt;
       line-height: 9pt;
       a {
         color: #FFF;
       }
+    }
+    &.pull-right {
+      float: right;
     }
   }
   ul.right {
@@ -55,6 +65,28 @@ header > nav {
 }
 
 main {
-  margin-top: 40px;
+  margin-top: 35px;
 
+}
+
+main > section.callout-image {
+  padding: 50px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+
+  h1 {
+    font-size: 50pt;
+  }
+  p {
+    font-size: 20pt;
+  }
+}
+
+main > section.description {
+  p {
+  max-width: 720px;
+font-size: 15pt;
+margin: 50px auto;
+}
 }

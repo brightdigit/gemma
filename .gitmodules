@@ -1,4 +1,4 @@
 [submodule "public"]
 	path = public
-	url = https://github.com/brightdigit/ll3.git
+	url = https://github.com/brightdigit/gemma.git
 	branch = gh-pages
