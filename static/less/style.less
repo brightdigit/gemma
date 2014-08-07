@@ -5,12 +5,21 @@
     -webkit-filter: blur(@value);
 }
 
+.grayscale(@value: 1) {
+  -webkit-filter: grayscale(@value);
+  -moz-filter: grayscale(@value);
+  -o-filter: grayscale(@value);
+  -ms-filter: grayscale(@value);
+  filter: grayscale(@value);
+}
+
 html, body {
   background-color: #FFF;
   color: #333;
   margin: 0;
   overflow-x: hidden;
   font-family: 'Josefin Sans', sans-serif;
+  font-size: 15pt;
 }
 /*
 a:visited {
@@ -40,15 +49,21 @@ header > nav {
       float: left;
       margin: 0px 20px;
       text-transform: lowercase;
-      font-size: 24pt;
+      font-size: 1.75em;
       line-height: 96px;
       font-weight: 600;
       text-shadow: 1px 1px rgba(0,0,0,0.9);
+      a {
+        color: #FC9;
+        &:hover {
+          color: #FEC;
+        }
+      }
     }
     li.brand{
       font-family: 'Dancing Script', cursive;
       text-transform: capitalize;
-      font-size: 48pt;
+      font-size: 3em;
       line-height: 9pt;
       font-weight: normal;
       a {
@@ -73,6 +88,49 @@ main {
 }
 
 main > section {
+  padding-top: 20px;
+  ul, ol {
+    padding: 0;
+  }
+  &.people-photos {
+    ul {
+      list-style: none;
+      display: block;
+      margin: 0px auto;
+      max-width: 700px;
+      li {
+        float:left;
+        margin: 10px;
+        figure {
+          margin: 0;
+        }
+        img {
+          display: block;
+          width: 100px;
+          height: 100px;
+          /*.grayscale(1.0);
+          .blur(1px);*/
+          cursor: pointer;
+          -webkit-filter: blur(1px) grayscale(100%);
+          &:hover {
+            -webkit-filter: grayscale(100%);
+          }
+        }
+        figcaption {
+          width: 100px;
+          display: block;
+          overflow: hidden;
+          margin-top: 10px;
+          font-size: 0.9em;
+          text-align: center;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  &:first-child {
+    padding-top: 0px;
+  }
   p {
     &.block-bg {
       color: #FFF;
@@ -82,18 +140,27 @@ main > section {
   }
   & > p:first-child {
       margin: 50px 200px;
-      font-size: 15pt;
+      font-size: 1.5em;
+  }
+  & > header:first-child {
+    text-align: center;
+    h2 {
+      font-size: 2.5em;
+    }
   }
   ul {
     list-style: none;
-    display: block;
+    display: table;
+    padding: 10px;
+    padding-top: 0;
     &.card-group {
       li {
-        float: left;
-        display: block;
-        width: 33%;
+        display: table-cell;
         & > section {
           margin: 20px;
+          padding: 10px;
+    padding-top: 0;
+    margin-top:0;
           & > header {
             text-align: center;
             h3 {
@@ -117,17 +184,47 @@ main > section.callout-image {
   text-align: center;
 
   h1 {
-    font-size: 50pt;
+    font-size: 3.5em;
   }
   p {
-    font-size: 20pt;
+    font-size: 1.25em
   }
 }
 
 main > section.description {
   p {
   max-width: 720px;
-font-size: 15pt;
+font-size: 1.25em;
 margin: 50px auto;
 }
+}
+
+main > section.blog-enteries {
+  background-color: #CCC;
+  padding: 30px;
+  & > header {
+    text-align: center;
+  }
+  & > ol {
+    list-style: none;
+    display: block;
+      columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  padding: 0;
+    li {
+      display: block;
+      height: 200px;
+      overflow: hidden;
+      padding: 10px;
+      p {
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+footer {
+  clear: both;
 }
