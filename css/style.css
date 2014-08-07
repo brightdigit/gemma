@@ -6,6 +6,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: 'Josefin Sans', sans-serif;
+  font-size: 15pt;
 }
 /*
 a:visited {
@@ -36,15 +37,21 @@ header > nav ul li {
   float: left;
   margin: 0px 20px;
   text-transform: lowercase;
-  font-size: 24pt;
+  font-size: 1.75em;
   line-height: 96px;
   font-weight: 600;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.9);
 }
+header > nav ul li a {
+  color: #FC9;
+}
+header > nav ul li a:hover {
+  color: #FEC;
+}
 header > nav ul li.brand {
   font-family: 'Dancing Script', cursive;
   text-transform: capitalize;
-  font-size: 48pt;
+  font-size: 3em;
   line-height: 9pt;
   font-weight: normal;
 }
@@ -63,6 +70,57 @@ header > nav a {
 main {
   margin-top: 35px;
 }
+main > section {
+  padding: 20px;
+}
+main > section ul,
+main > section ol {
+  padding: 0;
+}
+main > section.people-photos ul {
+  list-style: none;
+  margin: 0px auto;
+  max-width: 960px;
+}
+main > section.people-photos ul li {
+  float: left;
+  margin: 10px;
+}
+main > section.people-photos ul li figure {
+  margin: 0;
+}
+main > section.people-photos ul li img {
+  display: block;
+  width: 136px;
+  height: 136px;
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  filter: grayscale(1);
+  /*.blur(1px);*/
+  cursor: pointer;
+  /*-webkit-filter: blur(1px) grayscale(100%);*/
+}
+main > section.people-photos ul li img:hover {
+  -webkit-filter: grayscale(100%);
+}
+main > section.people-photos ul li figcaption {
+  width: 136px;
+  display: block;
+  overflow: hidden;
+  margin-top: 10px;
+  font-size: 0.9em;
+  text-align: center;
+  font-weight: 600;
+}
+main > section.people-photos ul li figcaption > .title {
+  font-size: 0.75em;
+  font-weight: normal;
+}
+main > section:first-child {
+  padding-top: 0px;
+}
 main > section p.block-bg {
   color: #FFF;
   background-color: rgba(0, 0, 0, 0.5);
@@ -70,19 +128,28 @@ main > section p.block-bg {
 }
 main > section > p:first-child {
   margin: 50px 200px;
-  font-size: 15pt;
+  font-size: 1.5em;
+}
+main > section > header:first-child {
+  text-align: center;
+}
+main > section > header:first-child h2 {
+  font-size: 2.5em;
 }
 main > section ul {
   list-style: none;
-  display: block;
+  display: table;
+  padding: 10px;
+  padding-top: 0;
 }
 main > section ul.card-group li {
-  float: left;
-  display: block;
-  width: 33%;
+  display: table-cell;
 }
 main > section ul.card-group li > section {
   margin: 20px;
+  padding: 10px;
+  padding-top: 0;
+  margin-top: 0;
 }
 main > section ul.card-group li > section > header {
   text-align: center;
@@ -102,13 +169,46 @@ main > section.callout-image {
   text-align: center;
 }
 main > section.callout-image h1 {
-  font-size: 50pt;
+  font-size: 3.5em;
 }
 main > section.callout-image p {
-  font-size: 20pt;
+  font-size: 1.25em;
 }
 main > section.description p {
   max-width: 720px;
-  font-size: 15pt;
+  font-size: 1.25em;
   margin: 50px auto;
+}
+main > section.blog-enteries {
+  background-color: #CCC;
+  padding: 30px;
+}
+main > section.blog-enteries > header {
+  text-align: center;
+}
+main > section.blog-enteries > ol {
+  list-style: none;
+  display: block;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  padding: 0;
+}
+main > section.blog-enteries > ol li {
+  display: block;
+  height: 200px;
+  overflow: hidden;
+  padding: 10px;
+}
+main > section.blog-enteries > ol li p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+footer {
+  clear: both;
+  padding: 30px;
+  background-color: #000;
+  color: #CCC;
+  margin-bottom: 0px;
+  text-align: right;
 }
