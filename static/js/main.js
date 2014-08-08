@@ -1,3 +1,3 @@
-require(function () {
-  console.log('hello world')
+require(["zepto"], function ($) {
+  console.log('hello world');
 });
